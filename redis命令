@@ -4,7 +4,28 @@ set hello world
 get hello
 del hello
 get hello nil
+
 ---list---
+rpush list-key item
+rpush list-key item2
+rpush list-key item
+lrange list-key 0 -1
+lindex list-key 1
+lpop list-key
+lrange list-key 0 -1
+
 ---set---
+sadd set-key item
+sadd set-key item2
+sadd set-key item3
+sadd set-key item
+smembers set-key
+sismember set-key item4
+sismember set-key item
+srem set-key item2
+srem set-key item2
+smembers set-key
+
 ---zset---
+
 ---hash---
