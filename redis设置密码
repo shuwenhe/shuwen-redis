@@ -1,0 +1,3 @@
+/etc/redis.conf
+config set requirepass shuwen123456
+config get requirepass
