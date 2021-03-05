@@ -1,2 +1,6 @@
+---redis设置密码---
 config set requirepass shuwen123456
 config get requirepass
+---redis密码登录---
+(error) NOAUTH Authentication required.
+auth shuwen123456
