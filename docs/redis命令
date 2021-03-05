@@ -29,3 +29,11 @@ smembers set-key
 ---zset---
 
 ---hash---
+hset hash-key sub-key1 value1
+hset hash-key sub-key2 value2
+hset hash-key sub-key1 value1
+hgetall hash-key
+hdel hash-key sub-key2
+hdel hash-key sub-key2
+hget hash-key sub-key1
+hgetall hash-key
