@@ -2,9 +2,9 @@ package redisConn
 
 import (
 	"log"
-	"shuwen-redis/src/config"
 
 	"github.com/go-redis/redis/v7"
+	"github.com/shuwenhe/shuwen-redis/src/config"
 )
 
 func ConnectRedis() *redis.Client {
