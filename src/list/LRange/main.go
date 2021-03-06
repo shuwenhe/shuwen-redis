@@ -13,8 +13,13 @@ func main() {
 }
 
 func LRange() {
-	res := conn.LRange("list-key", 0, -1).Val()
+	res := conn.LRange("list", 0, -1).Val()
 	for k, v := range res {
-		fmt.Printf("v%d = %s\n", k, v)
+		fmt.Printf("res %d = %s\n", k, v)
+	}
+
+	res2 := conn.LRange("list2", 0, -1).Val()
+	for k, v := range res2 {
+		fmt.Printf("res2 %d = %s\n", k, v)
 	}
 }

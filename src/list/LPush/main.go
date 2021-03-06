@@ -7,7 +7,7 @@ import (
 var conn = redisConn.ConnectRedis()
 
 func main() {
-	// LPush()
+	LPush()
 }
 
 func LPush() {

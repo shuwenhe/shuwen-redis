@@ -10,15 +10,7 @@ import (
 var conn = redisConn.ConnectRedis()
 
 func main() {
-	// RPush()
-	// BRPopLPush()
-}
-
-func RPush() {
-	conn.RPush("list", "item1")
-	conn.RPush("list", "item2")
-	conn.RPush("list2", "item3")
-	conn.RPush("list2", "item4")
+	BRPopLPush()
 }
 
 func BRPopLPush() { // 将一个元素从一个列表移动到另一个列表，并返回被移动的元素

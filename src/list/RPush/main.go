@@ -9,21 +9,15 @@ import (
 var conn = redisConn.ConnectRedis()
 
 func main() {
-	// RPush()
-	// RPush2()
-	// RPush3()
+	RPush()
 }
 
 func RPush() {
-	conn.RPush("list-key", "last")
-}
-
-func RPush2() {
-	res := conn.RPush("list-key", "new last").Val()
+	conn.RPush("list", "item1")
+	res := conn.RPush("list", "item2").Val()
 	fmt.Println("res = ", res)
-}
 
-func RPush3() {
-	res := conn.RPush("list-key", "a", "b", "c").Val() // values => ...interface{}
-	fmt.Println("res = ", res)
+	conn.RPush("list2", "item3")
+	res2 := conn.RPush("list2", "item4").Val()
+	fmt.Println("res2 = ", res2)
 }
