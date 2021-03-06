@@ -13,6 +13,6 @@ func main() {
 }
 
 func RPop() {
-	str := conn.RPop("list-key").Val()
+	str := conn.RPop("list").Val()
 	fmt.Println("str = ", str)
 }
