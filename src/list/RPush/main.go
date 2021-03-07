@@ -13,11 +13,6 @@ func main() {
 }
 
 func RPush() {
-	conn.RPush("list", "item1")
-	res := conn.RPush("list", "item2").Val()
+	res := conn.RPush("sort-input", 1, 9, 3, 7, 5).Val()
 	fmt.Println("res = ", res)
-
-	conn.RPush("list2", "item3")
-	res2 := conn.RPush("list2", "item4").Val()
-	fmt.Println("res2 = ", res2)
 }
